@@ -206,4 +206,20 @@ button{font-family:inherit;cursor:pointer}
   .sec{padding:3.5rem 0}
 }
 @media (max-width:480px){.brand{font-size:1.05rem}.brand-logo{width:44px;height:44px}.hero-btns .btn{flex:1}}
+/* hero mobile: ocupa exatamente a primeira tela (flutuantes em cima, texto embaixo) */
+@media (max-width:860px){
+  .hero{height:100vh;height:100svh;min-height:0;align-items:stretch}
+  .hero::after{height:34px}
+  .hero-in{height:100%;display:flex;flex-direction:column;justify-content:space-between;gap:1svh;padding:calc(68px + 1.5svh) 1.25rem calc(34px + 2svh)}
+  .stage{order:-1;flex:1 1 0;min-height:0;height:auto;width:100%}
+  .hero-logo{width:min(25svh,48vw);height:min(25svh,48vw)}
+  .b1,.b2{height:min(21svh,40vw)}
+  .stage-logo{box-shadow:0 0 0 5px rgba(255,255,255,.15),0 14px 36px rgba(0,0,0,.35)}
+  .hero-text{flex:none;text-align:center;display:flex;flex-direction:column;align-items:center}
+  .pill{font-size:min(.8rem,1.9svh);padding:.3rem .8rem;margin-bottom:1.2svh}
+  .hero h1{font-size:min(7.6vw,4.6svh);max-width:none;line-height:1.1}
+  .hero-sub{font-size:min(.95rem,2.2svh);margin-top:1.4svh;line-height:1.4}
+  .hero-btns{margin-top:2.2svh;width:100%;flex-wrap:nowrap;gap:.6rem}
+  .hero-btns .btn{flex:1;padding:min(.8rem,1.8svh) .6rem;font-size:min(.92rem,2.1svh);white-space:nowrap;justify-content:center}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
